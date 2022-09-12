@@ -4,7 +4,8 @@
 
 <div class="container q-container">
   <!--Dodawanie cytatu-->
-<app-add-quote></app-add-quote>
+<app-button customClasses="btn-floating teal add-button" (click)="form.onSwitchForm()"><i class="material-icons">add</i></app-button>
+<app-add-quote #form (newQuotation)="onNewQuotation($event)"></app-add-quote>
   <!-- Koniec dodawania cytatu -->
 
   <div class="row">

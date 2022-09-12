@@ -7,6 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AddQuoteComponent } from './add-quote/add-quote.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { RankingComponent } from './ranking/ranking.component';
+import { FormComponent } from './form/form.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { RankingComponent } from './ranking/ranking.component';
     NavbarComponent,
     AddQuoteComponent,
     QuotesComponent,
-    RankingComponent
+    RankingComponent,
+    FormComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule, FormsModule

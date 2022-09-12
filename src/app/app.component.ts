@@ -10,18 +10,7 @@ import {QUOTES} from "./models/database";
 export class AppComponent {
   title = 'druga';
   title2 = 'Najlepsze Cytaty';
-
-
-  showForm = false;
   quotes : Quotation[] = QUOTES;
-  onSwitchForm(){
-    this.showForm = !this.showForm;
-  }
-quotation: Quotation={author: '', sentence: '', votes: 0};
-  addQuotation(){
-    this.quotes.unshift(this.quotation);
-    this.quotation = {author: '',sentence:'',votes:0};
-  }
   addVote(quotation: Quotation, value: number){
     quotation.votes += value;
   }
@@ -30,5 +19,8 @@ quotation: Quotation={author: '', sentence: '', votes: 0};
   }
   worstQuotes(){
     return this.quotes.filter(q=>q.votes < 0)
+  }
+  onNewQuotation(quotation : Quotation){
+    this.quotes.unshift(quotation)
   }
 }
